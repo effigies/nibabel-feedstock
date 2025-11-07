@@ -38,11 +38,6 @@ build:
       - parrec2nii   = nibabel.cmdline.parrec2nii:main
 
 requirements:
-  build:
-    - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
   host:
     - python ${{ python_min }}.*
     - pip
