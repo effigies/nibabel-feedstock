@@ -8,16 +8,15 @@ schema_version: 1
 context:
   name: nibabel
   version: 5.3.2
-  sha256: c54ad8e1875a84d95498d0db5ec47d82cdb24d388229ea63b7dcb468a3516b3f
+  sha256: 0bdca6503b1c784b446c745a4542367de7756cfba0d72143b91f9ffb78be569b
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://github.com/nipy/${{ name }}/archive/${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: ${{ sha256 }}
-  file_name: ${{ name }}-${{ version }}.tar.gz
 
 build:
   number: 2
